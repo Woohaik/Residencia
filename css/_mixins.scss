@@ -1,0 +1,31 @@
+
+@mixin informationAfterBefore($top , $left){
+    content: "";
+    background: $colorTextoGris;
+    width: 14vw;
+    height: 1px;
+    display: block;
+    position: relative;
+    opacity: 0.5;
+    top: $top;
+    left: $left;
+}
+
+@mixin buttonStyles($fsize, $height, $width){
+    color: $blanco;
+    font-size: $fsize;
+    background: $colorBotones;
+    width: $width;
+    height: $height;
+    border-radius: 8px;
+    border: none;
+    outline:none;
+}
+@mixin circlesImage($widthHeight , $color , $bs){
+    border:$bs solid  $color;
+    width:$widthHeight ;
+    height: $widthHeight;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
