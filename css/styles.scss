@@ -110,6 +110,14 @@
     &--secondary {
       padding-top: 150px;
     }
+    &__icons{
+      @extend %center-content;
+      &__icon {
+        width: 20px;
+        height: 20px;
+        fill:red;
+      }
+    }
   }
   &__title {
     font-size: 16px;
