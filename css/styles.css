@@ -148,7 +148,7 @@
 }
 
 .cardBlock__circle--secondary {
-  top: 150px;
+  top: 145px;
 }
 
 .cardBlock__background {
@@ -176,6 +176,10 @@
 .cardBlock__content {
   color: black;
   font-size: 14px;
+}
+
+.cardBlock__content--secondary {
+  text-align: left;
 }
 
 .bgFooter {

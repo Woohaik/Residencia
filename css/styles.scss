@@ -87,20 +87,19 @@
           transition: all 0.4s;
         }
 
-        &--secondary{
+        &--secondary {
           width: 300px;
-          &:hover{
+          &:hover {
             width: 330px;
           }
         }
       }
-      &--secondary{
+      &--secondary {
         @include circlesImage(300px, $celeste, 5px);
       }
-
     }
-    &--secondary{
-      top: 150px;
+    &--secondary {
+      top: 145px;
     }
   }
   &__background {
@@ -108,7 +107,7 @@
     background: $colorFondoDos;
     border-radius: 7px;
     border: solid 2px ($colorFondoDos - 14%);
-    &--secondary{
+    &--secondary {
       padding-top: 150px;
     }
   }
@@ -124,18 +123,19 @@
   &__content {
     color: $negro;
     font-size: 14px;
+    &--secondary {
+      text-align: left;
+    }
   }
 }
 
 .bgFooter {
   background: $colorFondoTres;
   &__opinion {
-
-    &__circle{
-      &__overlay{
+    &__circle {
+      &__overlay {
         @include circlesImage(100px, $amarillo, 4px);
       }
-    
     }
   }
 }
