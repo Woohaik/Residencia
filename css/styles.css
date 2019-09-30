@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 
-.button__button, .cardBlock__circle, .cardBlock__circle__overlay, .cardBlock__background__icons {
+.navPrincipal__content, .navPrincipal__content__social__medias, .button__button, .cardBlock__circle, .cardBlock__circle__overlay, .cardBlock__background__icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,6 +13,26 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.navPrincipal {
+  background: #287cba;
+}
+
+.navPrincipal__content__text a {
+  color: white;
+}
+
+.navPrincipal__content__social {
+  font-size: 16px;
+}
+
+.navPrincipal__content__social a {
+  color: white;
+}
+
+.navPrincipal__content__social a img {
+  width: 16px;
 }
 
 .background {
@@ -163,9 +183,9 @@
 }
 
 .cardBlock__background__icons__icon {
-  width: 20px;
-  height: 20px;
-  fill: red;
+  width: 30px;
+  height: 30px;
+  fill: #f88767;
 }
 
 .cardBlock__title {

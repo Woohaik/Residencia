@@ -12,6 +12,30 @@
   align-items: center;
 }
 
+.navPrincipal {
+  background: $colorFondoUno;
+  &__content {
+    @extend %center-content;
+    &__text {
+      a {
+        color: $blanco;
+      }
+    }
+    &__social {
+      font-size: 16px;
+      &__medias {
+        @extend %center-content;
+      }
+      a {
+        color: $blanco;
+        img {
+          width: 16px;
+        }
+      }
+    }
+  }
+}
+
 .background {
   height: 45vh;
   background: url(../img/santander.jpg);
@@ -110,12 +134,12 @@
     &--secondary {
       padding-top: 150px;
     }
-    &__icons{
+    &__icons {
       @extend %center-content;
       &__icon {
-        width: 20px;
-        height: 20px;
-        fill:red;
+        width: 30px;
+        height: 30px;
+        fill: $colorBotones;
       }
     }
   }
