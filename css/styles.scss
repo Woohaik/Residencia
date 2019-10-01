@@ -11,6 +11,15 @@
   justify-content: center;
   align-items: center;
 }
+.fs-12{
+  font-size: 12px;
+}
+.fs-14{
+  font-size: 14px;
+}
+.fs-16{
+  font-size: 16px;
+}
 
 .navPrincipal {
   background: $colorFondoUno;
@@ -30,6 +39,74 @@
         color: $blanco;
         img {
           width: 16px;
+        }
+      }
+    }
+
+    &__search {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      &__input {
+
+        color: red;
+        input {
+
+          transition: all 0.7s;
+          margin-right: 1em;
+          box-sizing: content-box;
+          width: 25px;
+          background: url(../img/icon--search_b.png);
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-color: #d4e4f2;
+          background-size: 18px;
+          border: solid 1px transparent;
+          border-radius: 4px;
+          &:focus {
+            width: 110px;
+            background-image: none;
+            transition: all 0.7s;
+            background-color: $blanco;;
+          }
+        }
+      }
+      &__collapsible {
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        border-left: $blanco solid 1px;
+        border-right: $blanco solid 1px;
+        cursor: pointer;
+        width: 50px;
+        outline: none;
+
+        &__spain {
+          width: 20px;
+        }
+        i {
+          font-size: 14px;
+          color: $blanco;
+        }
+      }
+      &__content {
+        width: 100%;
+        top: 40px;
+
+        position: absolute;
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        li {
+          list-style: none;
+          a {
+            color: $negro;
+            &:hover {
+              color: red;
+            }
+          }
         }
       }
     }
@@ -178,4 +255,24 @@
   a {
     color: white;
   }
+}
+
+
+
+@media screen and (min-width: 600px) {
+  .navPrincipal__content__search .reverse {
+    position: relative;
+    float: right;
+    width: 50%;
+  }
+  
+  .navPrincipal__content__search .reverse:nth-of-type(1) {
+    left: 50%;
+  }
+  
+  .navPrincipal__content__search .reverse:nth-of-type(2) {
+    left: -50%;
+  }
+  
+
 }

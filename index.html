@@ -18,12 +18,12 @@
   <header>
     <div class="navPrincipal">
       <div class="container">
-        <div class="navPrincipal__content py-2 row">
-          <div class="col-lg-4 col-8  navPrincipal__content__text  ">
+        <div class="navPrincipal__content  row ">
+          <div class="col-lg-5 col-7 fs-14  navPrincipal__content__text  ">
             <a href="">Oficina de relaciones internacionales</a>
           </div>
-          <div class=" col-lg-6 order-3    navPrincipal__content__social ">
-            <div class="ml-auto w-50 navPrincipal__content__social__medias">
+          <div class=" col-lg-4 order-3    navPrincipal__content__social ">
+            <div class="ml-auto mr-2 w-50 navPrincipal__content__social__medias">
               <a class="px-2 mx-auto" href=""><i class="fab fa-facebook-f"></i></a>
               <a class="px-2 mx-auto" href=""><i class="fab fa-twitter"></i></a>
               <a class="px-2 mx-auto" href=""><i class="fas fa-play"></i></a>
@@ -31,10 +31,36 @@
               <a class="px-2 mx-auto" href=""><i class="fab fa-google-plus-g"></i></a>
               <a class="px-2 mx-auto" href=""><img class="pb-1" src="img/ico-opiniones.png" alt=""></a>
               <a class="px-2 mx-auto" href=""><img class="pb-1" src="img/ico-radio.png" alt=""></a>
+
             </div>
+
+
           </div>
-          <div class="col-lg-2 col-4 order-2 order-lg-12  navPrincipal__content__search  ">
-            algo mas
+
+          <div class="col-lg-3 col-5 order-2 order-lg-12  navPrincipal__content__search  ">
+
+
+
+            <div class="reverse">
+              <div class="navPrincipal__content__search__collapsible px-1 ">
+                <img class="navPrincipal__content__search__collapsible__spain" src="img/ico-funiber-es.png" alt="">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+
+              <div class="navPrincipal__content__search__content">
+                <ul>
+                  <li><a href="#">Opcion 1</a></li>
+                  <li><a href="#">Opcion 2</a></li>
+                  <li><a href="#">Opcion 3</a></li>
+                  <li><a href="#">Opcion 4</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="reverse navPrincipal__content__search__input ">
+                <form action="">
+                  <input type="text">
+                </form>
+              </div>
           </div>
         </div>
       </div>
@@ -46,9 +72,7 @@
     </div>
   </header>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vel labore at, facere saepe amet repellendus error
-    voluptatum possimus, omnis consectetur voluptates. Qui, pariatur soluta. Accusantium perspiciatis illum aliquam
-    recusandae!</p>
+
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur velit fugiat iusto repellendus ad libero
     deserunt adipisci omnis voluptatum explicabo, enim autem atque facere, ullam earum facilis et! Quae, dicta.</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, consequatur excepturi omnis labore rerum
@@ -281,6 +305,22 @@
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script>
+    var botonColapsable = document.getElementsByClassName("navPrincipal__content__search__collapsible");
+    for (var i = 0; i < botonColapsable.length; i++) {
+      botonColapsable[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          //Agregando tamaño para que entren todos los elementos
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.maxWidth = content.scrollWidth + "px";
+        }
+      });
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

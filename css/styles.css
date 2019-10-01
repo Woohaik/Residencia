@@ -15,6 +15,18 @@
           align-items: center;
 }
 
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
 .navPrincipal {
   background: #287cba;
 }
@@ -33,6 +45,89 @@
 
 .navPrincipal__content__social a img {
   width: 16px;
+}
+
+.navPrincipal__content__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navPrincipal__content__search__input {
+  color: red;
+}
+
+.navPrincipal__content__search__input input {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  margin-right: 1em;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 25px;
+  background: url(../img/icon--search_b.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-color: #d4e4f2;
+  background-size: 18px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+}
+
+.navPrincipal__content__search__input input:focus {
+  width: 110px;
+  background-image: none;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  background-color: white;
+}
+
+.navPrincipal__content__search__collapsible {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-left: white solid 1px;
+  border-right: white solid 1px;
+  cursor: pointer;
+  width: 50px;
+  outline: none;
+}
+
+.navPrincipal__content__search__collapsible__spain {
+  width: 20px;
+}
+
+.navPrincipal__content__search__collapsible i {
+  font-size: 14px;
+  color: white;
+}
+
+.navPrincipal__content__search__content {
+  width: 100%;
+  top: 40px;
+  position: absolute;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.navPrincipal__content__search__content li {
+  list-style: none;
+}
+
+.navPrincipal__content__search__content li a {
+  color: black;
+}
+
+.navPrincipal__content__search__content li a:hover {
+  color: red;
 }
 
 .background {
@@ -228,5 +323,19 @@
 
 .footer a {
   color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .navPrincipal__content__search .reverse {
+    position: relative;
+    float: right;
+    width: 50%;
+  }
+  .navPrincipal__content__search .reverse:nth-of-type(1) {
+    left: 50%;
+  }
+  .navPrincipal__content__search .reverse:nth-of-type(2) {
+    left: -50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
