@@ -179,6 +179,10 @@
   color: #757575;
 }
 
+.information__content--BgMap {
+  text-align: justify;
+}
+
 .button__tittle {
   font-size: 25px;
   color: #3379b7;
@@ -212,6 +216,16 @@
   border-radius: 8px;
   border: none;
   outline: none;
+}
+
+.BgMap {
+  background-color: #f0f0f0;
+}
+
+.BgMap__content__icon {
+  width: 45px;
+  height: 45px;
+  fill: #f88767;
 }
 
 .cardBlock {
@@ -268,9 +282,9 @@
 
 .cardBlock__background {
   padding-top: 100px;
-  background: #f8f8f8;
+  background: #f0f0f0;
   border-radius: 7px;
-  border: solid 2px #eaeaea;
+  border: solid 2px #e2e2e2;
 }
 
 .cardBlock__background--secondary {
@@ -307,6 +321,25 @@
   background: #ebf5f6;
 }
 
+.bgFooter__person {
+  background-color: white;
+  border: solid 2px #ebebeb;
+  border-radius: 4px;
+}
+
+.bgFooter__opinion {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bgFooter__opinion__circle {
+  float: left;
+}
+
 .bgFooter__opinion__circle__overlay {
   border: 4px solid #fdbd03;
   width: 100px;
@@ -325,7 +358,84 @@
   color: white;
 }
 
-@media screen and (min-width: 600px) {
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 30px;
+}
+
+.carousel i {
+  font-size: 30px;
+  color: black;
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #d4c9ca;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+.carousel .slide1 {
+  background-image: url(../img/slider-residencia-uno.jpg);
+  background-size: cover;
+}
+
+.carousel .slide2 {
+  background-image: url(../img/slider-residencia-uno.jpg);
+  background-size: cover;
+}
+
+.carousel .container div div {
+  top: 50px;
+}
+
+.carousel .container div div {
+  top: 25px !important;
+  background-color: rgba(254, 254, 254, 0.6);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .carousel-item {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .carousel i {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 25px;
+  }
+  .carousel-item {
+    height: 300px;
+  }
+  .carousel-text hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel i {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 20px;
+  }
+  .carousel-item {
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
   .navPrincipal__content__search .reverse {
     position: relative;
     float: right;
@@ -336,6 +446,18 @@
   }
   .navPrincipal__content__search .reverse:nth-of-type(2) {
     left: -50%;
+  }
+  .carousel-item {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .carousel .container div div {
+    padding: 10px;
+  }
+  .carousel .container {
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
