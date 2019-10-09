@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import "./variables";
 @import "./mixins";
 
@@ -20,7 +21,13 @@
 .fs-16 {
   font-size: 16px;
 }
+.fs-18 {
+  font-size: 18px;
+}
 
+.gray-text{
+  color:$colorTextoGris;
+}
 .navPrincipal {
   background: $colorFondoUno;
   &__content {
@@ -139,7 +146,7 @@
   &__content {
     font-size: 20px;
     color: $colorTextoGris;
-    &--BgMap{
+    &--BgMap {
       text-align: justify;
     }
   }
@@ -181,7 +188,6 @@
     }
   }
 }
-
 
 .cardBlock {
   margin-top: -100px;
@@ -228,8 +234,8 @@
     &__icons {
       @extend %center-content;
       &__icon {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         fill: $colorBotones;
       }
     }
@@ -254,23 +260,50 @@
 
 .bgFooter {
   background: $colorFondoTres;
-  &__person{
+  &__person {
+    margin-bottom: 20px;
+    position: relative;
     background-color: $blanco;
     border: solid 2px ($colorFondoDos - 5%);
-    border-radius: 4px;
+    border-radius: 10px;
+    padding: 4% 4% 8% 4%;
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 15px;
+      position: absolute;
+      bottom:-15px;
+      left: 30px;
+
+      border-right: 20px solid transparent;
+      border-top: 20px solid $blanco;
+      border-left: 20px solid transparent;
+
+
+    }
+    &::before{
+      content: "”";
+      font-family: "Roboto", sans-serif;
+      color: $amarillo;
+      font-size: 100px;
+      display: block;
+      position: absolute;
+      bottom: -80px;
+      left: 85%;
+    }
   }
   &__opinion {
-
-    align-items: center;
     display: flex;
+    align-items: center;
     &__circle {
       float: left;
 
       &__overlay {
         @include circlesImage(100px, $amarillo, 4px);
       }
-      &__description{
-       
+      &__description {
+
       }
     }
   }
@@ -283,91 +316,85 @@
     color: white;
   }
 }
-.carousel-item{
+.carousel-item {
   height: 400px;
 }
 
-
-.carousel-control-prev, .carousel-control-next{
-	width: 30px;
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px;
 }
 
-.carousel i{
-	font-size: 30px;
-	color: black;
-	width: 100%;
-	padding-top: 35px;
-	padding-bottom: 35px;
- 	background-color: #d4c9ca;
- 	vertical-align: middle;
- 	opacity: 0.8;
+.carousel i {
+  font-size: 30px;
+  color: black;
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #d4c9ca;
+  vertical-align: middle;
+  opacity: 0.8;
 }
 
-.carousel .slide1{
-    background-image: url(../img/slider-residencia-uno.jpg);
-    background-size: cover;
-  
+.carousel .slide1 {
+  background-image: url(../img/slider-residencia-uno.jpg);
+  background-size: cover;
 }
 
-.carousel .slide2{
-    background-image: url(../img/slider-residencia-uno.jpg);
-    background-size: cover;
+.carousel .slide2 {
+  background-image: url(../img/slider-residencia-uno.jpg);
+  background-size: cover;
 }
 
-
-.carousel .container div div{
+.carousel .container div div {
   top: 50px;
 }
 
-
-
-
-
-.carousel .container div div{
+.carousel .container div div {
   top: 25px !important;
-  background-color: rgba(254,254,254,0.6);
+  background-color: rgba(254, 254, 254, 0.6);
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 1200px) {
-  .carousel-item{
- 	height: 350px;
+  .carousel-item {
+    height: 350px;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .carousel i{
-	padding-top: 28px;
-	padding-bottom: 28px;
+  .carousel i {
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
-  .carousel-control-prev, .carousel-control-next{
-	width: 25px;
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 25px;
   }
-  .carousel-item{
- 	height: 300px;
+  .carousel-item {
+    height: 300px;
   }
 
-  .carousel-text hr{
-	margin-top: 15px;
-	margin-bottom: 15px;
+  .carousel-text hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .carousel i{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size: 25px;
+  .carousel i {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
   }
-  .carousel-control-prev, .carousel-control-next{
-	width: 20px;
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 20px;
   }
-  .carousel-item{
- 	height: 240px;
+  .carousel-item {
+    height: 240px;
   }
-
-
 }
 
 @media only screen and (max-width: 630px) {
@@ -385,18 +412,16 @@
     left: -50%;
   }
 
-
-  .carousel-item{
- 	height: 200px;
+  .carousel-item {
+    height: 200px;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
-  .carousel .container div div{
+  .carousel .container div div {
     padding: 10px;
   }
-  .carousel .container{
+  .carousel .container {
     padding: 0px;
   }
 }

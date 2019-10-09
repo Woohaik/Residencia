@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .button__button:hover {
   background: #da6949;
   cursor: pointer;
@@ -25,6 +27,14 @@
 
 .fs-16 {
   font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.gray-text {
+  color: #757575;
 }
 
 .navPrincipal {
@@ -292,8 +302,8 @@
 }
 
 .cardBlock__background__icons__icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   fill: #f88767;
 }
 
@@ -318,22 +328,49 @@
 }
 
 .bgFooter {
-  background: #ebf5f6;
+  background: #e6f0f1;
 }
 
 .bgFooter__person {
+  margin-bottom: 20px;
+  position: relative;
   background-color: white;
   border: solid 2px #ebebeb;
-  border-radius: 4px;
+  border-radius: 10px;
+  padding: 4% 4% 8% 4%;
+}
+
+.bgFooter__person::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 15px;
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  border-left: 20px solid transparent;
+}
+
+.bgFooter__person::before {
+  content: "”";
+  font-family: "Roboto", sans-serif;
+  color: #fdbd03;
+  font-size: 100px;
+  display: block;
+  position: absolute;
+  bottom: -80px;
+  left: 85%;
 }
 
 .bgFooter__opinion {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bgFooter__opinion__circle {
@@ -362,7 +399,8 @@
   height: 400px;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   width: 30px;
 }
 
@@ -409,7 +447,8 @@
     padding-top: 28px;
     padding-bottom: 28px;
   }
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     width: 25px;
   }
   .carousel-item {
@@ -427,7 +466,8 @@
     padding-bottom: 20px;
     font-size: 25px;
   }
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     width: 20px;
   }
   .carousel-item {
