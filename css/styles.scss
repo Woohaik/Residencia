@@ -24,98 +24,20 @@
 .fs-18 {
   font-size: 18px;
 }
+.fs-28{
+  font-size: 28px;
+}
 
 .gray-text{
   color:$colorTextoGris;
 }
-.navPrincipal {
-  background: $colorFondoUno;
-  &__content {
-    @extend %center-content;
-    &__text {
-      a {
-        color: $blanco;
-      }
-    }
-    &__social {
-      font-size: 16px;
-      &__medias {
-        @extend %center-content;
-      }
-      a {
-        color: $blanco;
-        img {
-          width: 16px;
-        }
-      }
-    }
 
-    &__search {
-      display: flex;
-      justify-content: left;
-      align-items: center;
+.carousel-tittle1{
 
-      &__input {
-        color: red;
-        input {
-          transition: all 0.7s;
-          margin-right: 1em;
-          box-sizing: content-box;
-          width: 25px;
-          background: url(../img/icon--search_b.png);
-          background-repeat: no-repeat;
-          background-position-y: center;
-          background-color: #d4e4f2;
-          background-size: 18px;
-          border: solid 1px transparent;
-          border-radius: 4px;
-          &:focus {
-            width: 110px;
-            background-image: none;
-            transition: all 0.7s;
-            background-color: $blanco;
-          }
-        }
-      }
-      &__collapsible {
-        padding-top: 0.4em;
-        padding-bottom: 0.4em;
-        border-left: $blanco solid 1px;
-        border-right: $blanco solid 1px;
-        cursor: pointer;
-        width: 50px;
-        outline: none;
-
-        &__spain {
-          width: 20px;
-        }
-        i {
-          font-size: 14px;
-          color: $blanco;
-        }
-      }
-      &__content {
-        width: 100%;
-        top: 40px;
-
-        position: absolute;
-        padding: 0 18px;
-        background-color: white;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        li {
-          list-style: none;
-          a {
-            color: $negro;
-            &:hover {
-              color: red;
-            }
-          }
-        }
-      }
-    }
-  }
+  color:$colorTextoAzul;
+}
+.carousel-tittle2{
+  color:$colorTitulos ;
 }
 
 .background {
@@ -317,6 +239,7 @@
   }
 }
 .carousel-item {
+
   height: 400px;
 }
 
@@ -326,7 +249,7 @@
 }
 
 .carousel i {
-  font-size: 30px;
+  font-size: 30px ;
   color: black;
   width: 100%;
   padding-top: 35px;
@@ -346,15 +269,12 @@
   background-size: cover;
 }
 
-.carousel .container div div {
-  top: 50px;
-}
-
-.carousel .container div div {
-  top: 25px !important;
-  background-color: rgba(254, 254, 254, 0.6);
-  padding-top: 15px;
-  padding-bottom: 15px;
+.carousel__tittlebg{
+bottom: 0;
+  background-color: rgba(240,240,240,0.8);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -376,10 +296,7 @@
     height: 300px;
   }
 
-  .carousel-text hr {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+
 }
 
 @media only screen and (max-width: 767px) {
