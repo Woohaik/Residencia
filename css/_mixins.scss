@@ -29,3 +29,43 @@
     overflow: hidden;
     position: relative;
 }
+
+%hover-button {
+    background: $colorBotones - 30%;
+    cursor: pointer;
+  }
+  
+  %center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  @mixin breakpoint($class) {
+    @if $class == xs {
+      @media (max-width: 767px) { @content; }
+    }
+    @else if $class == xxs {
+        @media (max-width: 575px) { @content; }
+      }
+      @else if $class == mobile {
+        @media (max-width: 470px) { @content; }
+      }
+    @else if $class == s { 
+      @media (max-width: 768px) { @content; }
+    }
+   
+    @else if $class == md {
+      @media (max-width: 992px) { @content; }
+    }
+   
+    @else if $class == lg {
+      @media (max-width: 1200px) { @content; }
+    }
+   
+    @else {
+      @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+  }
