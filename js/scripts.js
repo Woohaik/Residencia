@@ -1,11 +1,15 @@
 var btnS = false;
 var t = $(".secondNav__navbar");
+let s = $("#pageScroll");
+s.hide();
 /**************Eventos**********************/
 //Scroll
 $(window).scroll(function() {
   let m = $(".secondNav__image img");
-  let s = $("#pageScroll");
+
+
   if ($(this).scrollTop() >= 50) {
+    s.slideDown(500);
     m.css("width", "240px");
     if (btnS == false) {
       s.css("bottom", "0px");
@@ -13,6 +17,7 @@ $(window).scroll(function() {
       s.addClass("leftT");
     }
   } else {
+    s.slideUp(500);
     if (btnS == false) {
       s.css("bottom", "-60px");
     } else {

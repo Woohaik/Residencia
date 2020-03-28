@@ -2,21 +2,19 @@
 @import "./variables";
 @import "./mixins";
 
-.fs-12 {
-  font-size: 12px;
-}
-.fs-14 {
-  font-size: 14px;
-}
-.fs-16 {
-  font-size: 16px;
-}
+
+$fs-titulos  :  35px;
+$fs-sub-titulos  :  30px;
+$fs-slider-boton  :  25px;
+$texto-grande  :  20px;
+$texto  :  15px;
+$texto-s  :  14px;
+$texto-nav: 13px;
+
 .fs-18 {
   font-size: 18px;
 }
-.fs-28 {
-  font-size: 28px;
-}
+
 
 .gray-text {
   color: $colorTextoGris;
@@ -246,7 +244,7 @@
         border-radius: 4px;
         padding-top: 5px;
         padding-bottom: 5px;
-        font-size: 13px;
+        font-size: $texto-nav;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -267,7 +265,7 @@
         button {
           padding: 0 20px;
           width: 100%;
-          font-size: 13px;
+          font-size: $texto-s;
           height: 35px;
         }
       }
@@ -287,7 +285,7 @@
         justify-content: flex-end;
         display: flex;
         margin-left: auto;
-        font-size: 30px;
+        font-size:$fs-sub-titulos ;
       }
     }
   }
@@ -310,7 +308,7 @@
     position: absolute;
     top: calc(65% - 35px);
     left: calc(50% - 215px);
-    font-size: 25px;
+    font-size: $fs-slider-boton  ;
     color: $colorTitulos;
     span {
       color: $colorTextoAzul;
@@ -346,7 +344,7 @@
 
 .information {
   &__title {
-    font-size: 35px;
+    font-size: $fs-titulos ;
     color: $colorTitulos;
   }
   &__separator {
@@ -362,7 +360,7 @@
     }
   }
   &__content {
-    font-size: 20px;
+    font-size: $texto-grande ;
     color: $colorTextoGris;
     &--BgMap {
       text-align: justify;
@@ -372,7 +370,7 @@
 
 .button {
   &__tittle {
-    font-size: 25px;
+    font-size:$fs-slider-boton  ;
   }
   &__button {
     @extend %center-content;
@@ -435,7 +433,7 @@
       padding: 10px;
       &-title {
         color: $colorTextoGris;
-        font-size: 15px;
+        font-size: $texto ;
         font-weight: 600;
       }
       &-services {
@@ -446,12 +444,12 @@
           align-items: center;
           flex: 1 1 50%;
           box-sizing: border-box;
-          font-size: 14px;
+          font-size: $texto-s;
           font-weight: 600;
 
           i {
             color: $colorBotones;
-            font-size: 30px;
+            font-size:$fs-sub-titulos ;
             margin: 17px 15px 17px 5px;
           }
         }
@@ -515,7 +513,7 @@
     }
   }
   &__title {
-    font-size: 16px;
+    font-size:$texto ;
     color: $colorTitulos;
   }
   &__hr {
@@ -525,7 +523,7 @@
   }
   &__content {
     color: $negro;
-    font-size: 14px;
+    font-size: $texto-s;
     &--secondary {
       text-align: left;
     }
@@ -579,7 +577,7 @@
 }
 
 .footer {
-  font-size: 15px;
+  font-size: $texto ;
   background: $colorFondoCuatro;
   a {
     color: white;

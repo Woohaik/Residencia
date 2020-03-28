@@ -17,24 +17,8 @@
           align-items: center;
 }
 
-.fs-12 {
-  font-size: 12px;
-}
-
-.fs-14 {
-  font-size: 14px;
-}
-
-.fs-16 {
-  font-size: 16px;
-}
-
 .fs-18 {
   font-size: 18px;
-}
-
-.fs-28 {
-  font-size: 28px;
 }
 
 .gray-text {
@@ -418,7 +402,7 @@
 .nav-bar .secondNav__navbar .nav-button button {
   padding: 0 20px;
   width: 100%;
-  font-size: 13px;
+  font-size: 14px;
   height: 35px;
 }
 
@@ -781,7 +765,7 @@
 }
 
 .cardBlock__title {
-  font-size: 16px;
+  font-size: 15px;
   color: #646464;
 }
 
