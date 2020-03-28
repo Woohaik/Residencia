@@ -15,89 +15,76 @@
 </head>
 
 <body>
-  <header>
-
-    <!--
-    <div class="navPrincipal">
-      <div class="container">
-        <div class="navPrincipal__content  row ">
-          <div class="col-lg-5 col-7 fs-14  navPrincipal__content__text  ">
-            <a href="">Oficina de relaciones internacionales</a>
-          </div>
-          <div class=" col-lg-4 order-3    navPrincipal__content__social ">
-            <div class="ml-auto mr-2 w-50 navPrincipal__content__social__medias">
-              <a class="px-2 mx-auto" href=""><i class="fab fa-facebook-f"></i></a>
-              <a class="px-2 mx-auto" href=""><i class="fab fa-twitter"></i></a>
-              <a class="px-2 mx-auto" href=""><i class="fas fa-play"></i></a>
-              <a class="px-2 mx-auto" href=""><i class="fab fa-linkedin-in"></i></a>
-              <a class="px-2 mx-auto" href=""><i class="fab fa-google-plus-g"></i></a>
-              <a class="px-2 mx-auto" href=""><img class="pb-1" src="img/ico-opiniones.png" alt=""></a>
-              <a class="px-2 mx-auto" href=""><img class="pb-1" src="img/ico-radio.png" alt=""></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-5 order-2 order-lg-12  navPrincipal__content__search  ">
-            <div class="reverse">
-              <div class="navPrincipal__content__search__collapsible px-1 ">
-                <img class="navPrincipal__content__search__collapsible__spain" src="img/ico-funiber-es.png" alt="">
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="navPrincipal__content__search__content">
-                <ul>
-                  <li><a href="#">Opcion 1</a></li>
-                  <li><a href="#">Opcion 2</a></li>
-                  <li><a href="#">Opcion 3</a></li>
-                  <li><a href="#">Opcion 4</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="reverse navPrincipal__content__search__input ">
-              <form action="">
-                <input type="text">
-              </form>
-            </div>
-          </div>
-        </div>
+  <header class="nav-bar">
+    <nav class="mainNav ">
+<div class="container mainNav__container">
+  <div class="mainNav__title">
+    Oficina de Relaciones Internacionales
+  </div>
+  <div class="mainNav__icons">
+    <a class="" href=""><i class="fab fa-facebook-f"></i></a>
+    <a class="" href=""><i class="fab fa-twitter"></i></a>
+    <a class="" href=""><i class="fas fa-play"></i></a>
+    <a class="" href=""><i class="fab fa-linkedin-in"></i></a>
+    <a class="" href=""><i class="fab fa-google-plus-g"></i></a>
+    <a class="" href=""><img src="img/ico-opiniones.png" alt=""></a>
+    <a class="" href=""><img class="second" src="img/ico-radio.png" alt=""></a>
+  </div>
+  <div class="mainNav__search">
+<input class="empty" type="text" id="iconified" placeholder="&#xF002;">
+  </div>
+  <div class="mainNav__country">
+    <div class="dropdown">
+      <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        asd
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
       </div>
     </div>
--->
-
-    <div class="navSecundario">
-      <div class="container">
+  </div>
+</div>
+    </nav>
+    <div class="secondNav container">
+      <div class="secondNav__image">
+        <img src="img/logo-resi.svg" alt="">
+      </div>
+      <div onclick="toggleNav()" class="secondNav-collapsable">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="secondNav__navbar">
+   
+          <div class="nav-item">
+            LA RESIDENCIA
+          </div>
+          <div class="nav-item">
+            ALOJAMIENTOS
+          </div>
+          <div class="nav-item">
+            SERVICIOS
+          </div>
+          <div class="nav-item">
+            UBICACIÓN
+          </div>
+          <div class="nav-item">
+            TARIFAS
+          </div>
+          <div class="nav-item">
+            CONTACTO
+          </div>
+          <div class="nav-button">
+  <button class="button__tittle button__button">
+HAZ TU RESERVA
+  </button>
+          </div>
+        
+       
 
       </div>
     </div>
   </header>
-
-
-
-
-  <!-- Apertura slider-->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-
-
-      <div class="carousel-item    active slide1">
-        <div class=" d-flex justify-content-center ">
-          <div class="  px-3 text-center carousel__tittlebg ">
-            <div class="fs-28 carousel-tittle2"><span class=" font-weight-bold carousel-tittle1">Tu Residencia</span> en
-              Santander</div>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <i class="fas fa-chevron-left"></i>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <i class="fas fa-chevron-right"></i>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <!--cierre de slider-->
 
 
   <section class="information container my-5">
@@ -873,30 +860,42 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script>
-    var botonColapsable = document.getElementsByClassName("navPrincipal__content__search__collapsible");
-    for (var i = 0; i < botonColapsable.length; i++) {
-      botonColapsable[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          //Agregando tamaño para que entren todos los elementos
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.style.maxWidth = content.scrollWidth + "px";
-        }
-      });
-    }
+
   </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+    <script>
+      window.addEventListener('resize', ()=>{
+          if (window.innerWidth > 992) {
+        let t = $('.secondNav__navbar');
+          t.show(250);
+        
+    }
+      });
+
+
+      toggleNav = () =>{
+        let t = $('.secondNav__navbar');
+        t.toggle(250);
+      }
+
+      $('#iconified').on('keyup', function() {
+    var input = $(this);
+    if(input.val().length === 0) {
+        input.addClass('empty');
+    } else {
+        input.removeClass('empty');
+
+    }
+});
+    </script>
 </body>
 
 </html>
