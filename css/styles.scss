@@ -235,7 +235,8 @@ $texto-nav: 13px;
       display: flex;
       transition: left 0.5s;
 
-      .nav-item {
+      .nav-item { 
+        cursor: pointer;
         transition: all 0.4s;
 
         box-sizing: border-box;

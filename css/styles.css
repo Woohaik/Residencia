@@ -362,6 +362,7 @@
 }
 
 .nav-bar .secondNav__navbar .nav-item {
+  cursor: pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-sizing: border-box;
