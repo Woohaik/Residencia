@@ -1,11 +1,11 @@
 let buttonShow = false;
-const navBar = $(".secondNav__navbar");
+const navBar = $(".nav-bar__secondary__navbar");
 const scroll = $("#pageScroll");
 scroll.hide();
 /**************Eventos**********************/
 //Scroll
 $(window).scroll(() => {
-  let navImage = $(".secondNav__image img");
+  let navImage = $(".nav-bar__secondary__image img");
 
 
   if ($(this).scrollTop() >= 50) {
