@@ -2,15 +2,44 @@
 @import "./variables";
 @import "./mixins";
 
-
-
-.fs-18 {
-  font-size: 18px;
-}
-
+$fs-titulos: 35px;
+$fs-sub-titulos: 30px;
+$fs-slider-boton: 25px;
+$texto-grande: 20px;
+$texto: 15px;
+$texto-s: 14px;
+$texto-nav: 13px;
 
 .gray-text {
   color: $colorTextoGris;
+}
+
+.input {
+  background-color: rgb(230, 230, 230);
+  padding-left: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  margin: 0 15px;
+  width: 30px;
+  transition: all 0.5s;
+
+  &:focus {
+    background-color: white;
+    width: 100px;
+    @include breakpoint(s) {
+      width: 100%;
+    }
+  }
+  @include breakpoint(s) {
+    margin: 0 15px 0 auto;
+  }
+  &.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
 }
 
 .nav-bar {
@@ -19,7 +48,7 @@
   top: 0;
   z-index: 2;
   border-bottom: 0.5px solid rgb(200, 200, 200);
-  .mainNav {
+  &__main {
     background-color: $colorFondoUno;
     color: $blanco;
     &__container {
@@ -79,34 +108,6 @@
       display: flex;
       align-items: center;
       height: 40px;
-      input {
-        background-color: rgb(230, 230, 230);
-        padding-left: 0.4rem;
-        border-radius: 5px;
-        border: none;
-        height: 25px;
-        margin: 0 15px;
-        width: 30px;
-        transition: all 0.5s;
-
-        &:focus {
-          background-color: white;
-          width: 100px;
-          @include breakpoint(s) {
-            width: 100%;
-          }
-        }
-        @include breakpoint(s) {
-          margin: 0 15px 0 auto;
-        }
-      }
-      input.empty {
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-      }
-
       @include breakpoint(s) {
         border-bottom: 1px solid $blanco;
         flex: 1 1 25%;
@@ -119,11 +120,8 @@
     &__country {
       cursor: pointer;
       border-left: 1px solid white;
-
       border-right: 1px solid white;
-
       height: 40px;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -157,7 +155,7 @@
           position: absolute;
           bottom: -105px;
           right: 0;
- display: none;
+          display: none;
           height: min-content;
           min-width: 100%;
           width: min-content;
@@ -177,7 +175,7 @@
             &:hover {
               background-color: lighten($colorFondoUno, 10%) !important;
             }
-            &:last-child{
+            &:last-child {
               border-bottom-left-radius: 5px;
               border-bottom-right-radius: 5px;
             }
@@ -200,7 +198,7 @@
     }
   }
 
-  .secondNav {
+  &__secondary {
     flex-wrap: wrap;
     height: min-content;
     display: flex;
@@ -227,32 +225,52 @@
       justify-content: space-between;
       display: flex;
       transition: left 0.5s;
-
-      .nav-item {
-        transition: all 0.4s;
-
-        box-sizing: border-box;
-        padding-left: 8px;
-        padding-right: 8px;
-        border-radius: 4px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-size: $texto-nav;
-        font-weight: 600;
+      ul {
         display: flex;
-        align-items: center;
-        &:hover {
-          background: $amarillo !important;
-          color: $blanco !important;
-        }
-
-        @include breakpoint(md) {
+        padding: 0;
+        margin: 0 auto;
+        margin-right: 20px;
+        li {
+          cursor: pointer;
+          transition: all 0.4s;
+          margin-left: 10px;
+          margin-right: 10px;
+          box-sizing: border-box;
+          padding-left: 8px;
+          padding-right: 8px;
+          border-radius: 4px;
           padding-top: 5px;
           padding-bottom: 5px;
+          font-size: $texto-nav;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          &:hover {
+            background: $amarillo !important;
+            color: $blanco !important;
+          }
+
+          @include breakpoint(md) {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 100%;
+            margin: 0;
+          }
+        }
+        @include breakpoint(md) {
           width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
-      .nav-button {
+
+      @include breakpoint(md) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &-button {
         margin-top: 10px;
         margin-bottom: 15px;
         button {
@@ -261,12 +279,6 @@
           font-size: $texto-s;
           height: 35px;
         }
-      }
-
-      @include breakpoint(md) {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
       }
     }
 
@@ -278,7 +290,7 @@
         justify-content: flex-end;
         display: flex;
         margin-left: auto;
-        font-size:$fs-sub-titulos ;
+        font-size: $fs-sub-titulos;
       }
     }
   }
@@ -301,7 +313,7 @@
     position: absolute;
     top: calc(65% - 35px);
     left: calc(50% - 215px);
-    font-size: $fs-slider-boton  ;
+    font-size: $fs-slider-boton;
     color: $colorTitulos;
     span {
       color: $colorTextoAzul;
@@ -337,7 +349,7 @@
 
 .information {
   &__title {
-    font-size: $fs-titulos ;
+    font-size: $fs-titulos;
     color: $colorTitulos;
   }
   &__separator {
@@ -353,7 +365,7 @@
     }
   }
   &__content {
-    font-size: $texto-grande ;
+    font-size: $texto-grande;
     color: $colorTextoGris;
     &--BgMap {
       text-align: justify;
@@ -362,10 +374,10 @@
 }
 
 .button {
-  &__tittle {
-    font-size:$fs-slider-boton  ;
+  &--title {
+    font-size: $fs-slider-boton;
   }
-  &__button {
+  &-content {
     @extend %center-content;
     // @parametros tamaño de texto, altura , anchura
     @include buttonStyles(18px, 55px, 100px);
@@ -384,7 +396,7 @@
   }
 }
 
-.BgMap {
+.bg-frame {
   padding-top: 20px;
   padding-bottom: 45px;
   background-color: rgb(245, 248, 253);
@@ -421,12 +433,11 @@
     &__content {
       box-sizing: border-box;
       flex: 1 1 50%;
-
       flex-basis: 400px;
       padding: 10px;
       &-title {
         color: $colorTextoGris;
-        font-size: $texto ;
+        font-size: $texto;
         font-weight: 600;
       }
       &-services {
@@ -442,7 +453,7 @@
 
           i {
             color: $colorBotones;
-            font-size:$fs-sub-titulos ;
+            font-size: $fs-sub-titulos;
             margin: 17px 15px 17px 5px;
           }
         }
@@ -454,17 +465,17 @@
   }
 }
 
-.cardBlock {
+.card-block {
+  $this: &;
   margin-top: -100px;
   &__circle {
     @extend %center-content;
     position: relative;
     top: 100px;
-
-    &__overlay {
+    &-overlay {
       @extend %center-content;
       @include circlesImage(200px, $celeste, 5px);
-      &__image {
+      img {
         position: absolute;
         width: 200px;
         transition: all 0.4s;
@@ -473,19 +484,7 @@
           width: 220px;
           transition: all 0.4s;
         }
-        &--secondary {
-          width: 300px;
-          &:hover {
-            width: 330px;
-          }
-        }
       }
-      &--secondary {
-        @include circlesImage(300px, $celeste, 5px);
-      }
-    }
-    &--secondary {
-      top: 145px;
     }
   }
   &__background {
@@ -493,12 +492,9 @@
     background: $colorFondoDos;
     border-radius: 7px;
     border: solid 2px ($colorFondoDos - 14%);
-    &--secondary {
-      padding-top: 150px;
-    }
     &__icons {
       @extend %center-content;
-      &__icon {
+      img {
         width: 25px;
         height: 25px;
         fill: $colorBotones;
@@ -506,7 +502,7 @@
     }
   }
   &__title {
-    font-size:$texto ;
+    font-size: $texto;
     color: $colorTitulos;
   }
   &__hr {
@@ -517,13 +513,30 @@
   &__content {
     color: $negro;
     font-size: $texto-s;
-    &--secondary {
+  }
+  &--style-2 {
+    #{$this}__circle {
+      top: 145px;
+      &-overlay {
+        @include circlesImage(300px, $celeste, 5px);
+        img {
+          width: 300px;
+          &:hover {
+            width: 330px;
+          }
+        }
+      }
+    }
+    #{$this}__content {
       text-align: left;
+    }
+    #{$this}__background {
+      padding-top: 150px;
     }
   }
 }
 
-.bgFooter {
+.opinions {
   background: $colorFondoTres;
   &__person {
     margin-bottom: 20px;
@@ -556,21 +569,25 @@
       left: 85%;
     }
   }
-  &__opinion {
+  &__commentary {
     display: flex;
     align-items: center;
     &__circle {
       float: left;
-
-      &__overlay {
+      &-overlay {
         @include circlesImage(100px, $amarillo, 4px);
+      }
+    }
+    &__description {
+      & > div {
+        font-size: 18px;
       }
     }
   }
 }
 
 .footer {
-  font-size: $texto ;
+  font-size: $texto;
   background: $colorFondoCuatro;
   a {
     color: white;
@@ -596,18 +613,18 @@
   &:hover {
     transform: scale(1.05);
   }
-}
 
-.scrollModify {
-  height: 40px !important;
-  width: 70px !important;
-  bottom: 100px !important;
+  &.scrollModify {
+    height: 40px !important;
+    width: 70px !important;
+    bottom: 100px !important;
 
-  border-bottom-left-radius: 8px !important;
-  border-top-right-radius: 0 !important ;
+    border-bottom-left-radius: 8px !important;
+    border-top-right-radius: 0 !important ;
 
-  left: calc(100%) !important;
-}
-.leftT {
-  left: calc(100% - 70px) !important;
+    left: calc(100%) !important;
+  }
+  &.leftT {
+    left: calc(100% - 70px) !important;
+  }
 }

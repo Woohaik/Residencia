@@ -1,67 +1,67 @@
-var btnS = false;
-var t = $(".secondNav__navbar");
-let s = $("#pageScroll");
-s.hide();
+let buttonShow = false;
+const navBar = $(".nav-bar__secondary__navbar");
+const scroll = $("#pageScroll");
+scroll.hide();
 /**************Eventos**********************/
 //Scroll
-$(window).scroll(function() {
-  let m = $(".secondNav__image img");
+$(window).scroll(() => {
+  let navImage = $(".nav-bar__secondary__image img");
 
 
   if ($(this).scrollTop() >= 50) {
-    s.slideDown(500);
-    m.css("width", "240px");
-    if (btnS == false) {
-      s.css("bottom", "0px");
+    scroll.slideDown(500);
+    navImage.css("width", "240px");
+    if (buttonShow == false) {
+      scroll.css("bottom", "0px");
     } else {
-      s.addClass("leftT");
+      scroll.addClass("leftT");
     }
   } else {
-    s.slideUp(500);
-    if (btnS == false) {
-      s.css("bottom", "-60px");
+    scroll.slideUp(500);
+    if (buttonShow == false) {
+      scroll.css("bottom", "-60px");
     } else {
-      s.removeClass("leftT");
+      scroll.removeClass("leftT");
     }
-    m.css("width", "290px");
+    navImage.css("width", "290px");
   }
 });
 //Rezise
 window.addEventListener("resize", () => {
   if (window.innerWidth > 992) {
-    t.show(250);
+    navBar.show(250);
   }
 
   if (window.innerWidth < 992) {
-    t.hide(250);
+    navBar.hide(250);
   }
 
   if (window.innerWidth <= 1630) {
-    btnS = true;
+    buttonShow = true;
     $("#pageScroll").addClass("scrollModify");
   } else {
-    btnS = false;
+    buttonShow = false;
     $("#pageScroll").removeClass("scrollModify");
   }
 });
 
 //Interaccion
-$("#pageScroll").click(function() {
+$("#pageScroll").click(() => {
   $("html, body").animate({ scrollTop: 0 }, 500);
   return false;
 });
 
 $("#dropdownCountry").hover(
-  function() {
+  () => {
     $("#dropdownCountry .dropdown__options").fadeIn(200);
   },
-  function() {
+  () => {
     $("#dropdownCountry .dropdown__options").fadeOut(200);
   }
 );
 
-$("#iconified").on("keyup", function() {
-  var input = $(this);
+$("#iconified").on("keyup", () => {
+  let input = $(this);
   if (input.val().length === 0) {
     input.addClass("empty");
   } else {
@@ -71,5 +71,5 @@ $("#iconified").on("keyup", function() {
 
 /**************Eventos**********************/
 toggleNav = () => {
-  t.toggle(250);
+  navBar.toggle(250);
 };
