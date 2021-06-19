@@ -26,6 +26,7 @@ $(window).scroll(() => {
     navImage.css("width", "290px");
   }
 });
+
 //Rezise
 window.addEventListener("resize", () => {
   if (window.innerWidth > 992) {
