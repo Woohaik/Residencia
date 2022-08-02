@@ -9,3 +9,5 @@ Clon de sitio web residencia universitaria de Universidad Europea del Atlántico
 * **Bootstrap 4**: Framework  utilizado para reutilizaciónn de estilos y comportamientos.
 
 Web original:  [https://residencia.uneatlantico.es](https://residencia.uneatlantico.es)
+
+Web Clon:   [https://d1yk06cdai7txo.cloudfront.net](https://d1yk06cdai7txo.cloudfront.net)
